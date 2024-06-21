@@ -1,12 +1,16 @@
 "use client";
 import styled from "styled-components";
+import Link from "next/link";
 import { Heart } from "@/components/icons/Heart";
 
 const Header = () => {
   return (
     <Container>
-      <Icon src="marvel_logo.svg" alt={"marvel"} width={100} height={100} />
-      <Favorites>
+      <Link href="/">
+        <Icon src="marvel_logo.svg" alt={"marvel"} width={100} height={100} />
+      </Link>
+
+      <Favorites href="/favorites">
         <RedHeart selected size="lg" />
         <FavoritesCounter>1</FavoritesCounter>
       </Favorites>
@@ -29,7 +33,7 @@ const Icon = styled.img<{ $width?: number; $height?: number }>`
   height: ${(props) => (props.$height ? `${props.$height}px` : "52px")};
 `;
 
-const Favorites = styled.div`
+const Favorites = styled(Link)`
   display: flex;
   align-items: center;
   gap: 8px;
