@@ -1,4 +1,4 @@
-import { CharacterDataWrapper } from "@/types/MarvelApiTypes";
+import { CharacterDataWrapper, ComicDataWrapper } from "@/types/MarvelApiTypes";
 import crypto from "crypto";
 
 const getAuthenticationParams = () => {
@@ -35,5 +35,32 @@ export const getCharacters = async () => {
   const url = `${endpoint}?${params.toString()}`;
   const response = await fetch(url);
   const data = (await response.json()) as CharacterDataWrapper;
+  return data;
+};
+
+export const getCharacter = async (id: number) => {
+  const endpoint = `${process.env.CHARACTERS_API_URL}/characters/${id}`;
+  const params = new URLSearchParams({
+    ...getAuthenticationParams(),
+    limit: "50",
+    offset: "0",
+  });
+  const url = `${endpoint}?${params.toString()}`;
+  const response = await fetch(url);
+  const data = (await response.json()) as CharacterDataWrapper;
+  return data?.data?.results?.[0];
+};
+
+export const getComics = async (characterId: number) => {
+  const endpoint = `${process.env.CHARACTERS_API_URL}/comics`;
+  const params = new URLSearchParams({
+    ...getAuthenticationParams(),
+    limit: "20",
+    offset: "0",
+    characters: characterId.toString(),
+  });
+  const url = `${endpoint}?${params.toString()}`;
+  const response = await fetch(url);
+  const data = (await response.json()) as ComicDataWrapper;
   return data;
 };

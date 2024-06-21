@@ -2,6 +2,7 @@
 import { Character } from "@/types/MarvelApiTypes";
 import CharacterCard from "./CharacterCard";
 import styled from "styled-components";
+import Link from "next/link";
 
 const CharactersList: React.FC<{ characters: Character[] }> = ({
   characters,
@@ -10,10 +11,14 @@ const CharactersList: React.FC<{ characters: Character[] }> = ({
     <Ul>
       {characters.map((character) => (
         <Li key={character.id}>
-          <CharacterCard
-            name={character.name}
-            thumbnail={character.thumbnail}
-          />
+          <Link href={`/characters/${character.id}`}>
+            <CharacterCard
+              name={character.name}
+              thumbnail={character.thumbnail}
+              id={character.id}
+              description={character.description}
+            />
+          </Link>
         </Li>
       ))}
     </Ul>
