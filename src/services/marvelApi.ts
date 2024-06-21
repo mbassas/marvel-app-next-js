@@ -25,13 +25,16 @@ const getAuthenticationParams = () => {
   };
 };
 
-export const getCharacters = async () => {
+export const getCharacters = async (startsWith = "") => {
   const endpoint = `${process.env.CHARACTERS_API_URL}/characters`;
   const params = new URLSearchParams({
     ...getAuthenticationParams(),
     limit: "50",
     offset: "0",
   });
+  if (startsWith) {
+    params.set("nameStartsWith", startsWith);
+  }
   const url = `${endpoint}?${params.toString()}`;
   const response = await fetch(url);
   const data = (await response.json()) as CharacterDataWrapper;
