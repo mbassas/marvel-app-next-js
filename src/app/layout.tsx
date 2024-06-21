@@ -1,9 +1,14 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "../../lib/registry";
 import Header from "@/components/Header/Header";
+import { Roboto_Condensed } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Condensed({
+  weight: ["400", "500", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -13,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <StyledComponentsRegistry>
-        <body className={inter.className}>
+        <body className={roboto.className}>
           <Header />
           {children}
         </body>

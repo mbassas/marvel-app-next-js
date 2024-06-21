@@ -1,9 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { Roboto_Condensed } from "next/font/google";
 import { Heart } from "@/components/icons/Heart";
-
-const robotoCondensed = Roboto_Condensed({ subsets: ["latin"] });
 
 const Header = () => {
   return (
@@ -11,9 +8,7 @@ const Header = () => {
       <Icon src="marvel_logo.svg" alt={"marvel"} width={100} height={100} />
       <Favorites>
         <RedHeart selected size="lg" />
-        <FavoritesCounter className={robotoCondensed.className}>
-          1
-        </FavoritesCounter>
+        <FavoritesCounter>1</FavoritesCounter>
       </Favorites>
     </Container>
   );
