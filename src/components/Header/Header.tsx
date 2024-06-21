@@ -1,9 +1,11 @@
 "use client";
 import styled from "styled-components";
 import Link from "next/link";
+import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "@/components/icons/Heart";
 
 const Header = () => {
+  const { favorites } = useFavoritesContext();
   return (
     <Container>
       <Link href="/">
@@ -12,7 +14,7 @@ const Header = () => {
 
       <Favorites href="/favorites">
         <RedHeart selected size="lg" />
-        <FavoritesCounter>1</FavoritesCounter>
+        <FavoritesCounter>{favorites.length}</FavoritesCounter>
       </Favorites>
     </Container>
   );

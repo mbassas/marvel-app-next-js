@@ -1,6 +1,7 @@
 "use client";
 import { Character } from "@/types/MarvelApiTypes";
 import styled from "styled-components";
+import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "./icons/Heart";
 
 interface CharacterCardProps
@@ -15,10 +16,12 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   description,
   isDetailed = false,
 }) => {
+  const { toggleFavorite, favorites } = useFavoritesContext();
+  const isFavorite = favorites.includes(id);
   const handleToggleFavorite = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     event.stopPropagation();
-    console.log("Toggle favorite", id);
+    toggleFavorite(id);
   };
 
   const showDescription = isDetailed && description;
@@ -35,7 +38,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         {!isDetailed && <Rectangle />}
         <Name $isDetailed={isDetailed}>{name}</Name>
         <NoStyleButton onClick={handleToggleFavorite}>
-          <Heart selected={false} size={isDetailed ? "lg" : "sm"} />
+          <Heart selected={isFavorite} size={isDetailed ? "lg" : "sm"} />
         </NoStyleButton>
       </CharacterInfo>
       {showDescription && <Description>{description}</Description>}
@@ -117,7 +120,7 @@ const CharacterInfo = styled.div`
   align-items: center;
 `;
 
-export const Name = styled.span<{ $isDetailed: boolean }>`
+const Name = styled.span<{ $isDetailed: boolean }>`
   width: 108px;
   color: #fff;
   font-size: 14px;
@@ -133,7 +136,7 @@ export const Name = styled.span<{ $isDetailed: boolean }>`
     font-size: 32px;
     line-height: 38px;
     width: 218px;
-    `}
+  `}
 `;
 
 const Cut = styled.div`
