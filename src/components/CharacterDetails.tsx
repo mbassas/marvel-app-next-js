@@ -11,7 +11,7 @@ const CharacterDetails: React.FC<{
   return (
     <ContentWrapper $paddingBottom={24}>
       <CharacterCard
-        detailed
+        isDetailed
         name={character.name}
         thumbnail={character.thumbnail}
         id={character.id}

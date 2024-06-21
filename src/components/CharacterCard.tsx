@@ -5,7 +5,7 @@ import { Heart } from "./icons/Heart";
 
 interface CharacterCardProps
   extends Pick<Character, "name" | "thumbnail" | "id" | "description"> {
-  detailed?: boolean;
+  isDetailed?: boolean;
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
@@ -13,7 +13,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   thumbnail,
   id,
   description,
-  detailed = false,
+  isDetailed = false,
 }) => {
   const handleToggleFavorite = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
@@ -21,10 +21,10 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
     console.log("Toggle favorite", id);
   };
 
-  const showDescription = detailed && description;
+  const showDescription = isDetailed && description;
   return (
-    <Container $detailed={detailed}>
-      <CharacterPhotoWrapper $detailed={detailed}>
+    <Container $isDetailed={isDetailed}>
+      <CharacterPhotoWrapper $isDetailed={isDetailed}>
         <CharacterPhoto
           src={`${thumbnail.path}.${thumbnail.extension}`}
           alt={name}
@@ -32,10 +32,10 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
       </CharacterPhotoWrapper>
 
       <CharacterInfo>
-        {!detailed && <Rectangle />}
-        <Name $detailed={detailed}>{name}</Name>
+        {!isDetailed && <Rectangle />}
+        <Name $isDetailed={isDetailed}>{name}</Name>
         <NoStyleButton onClick={handleToggleFavorite}>
-          <Heart selected={false} size={detailed ? "lg" : "sm"} />
+          <Heart selected={false} size={isDetailed ? "lg" : "sm"} />
         </NoStyleButton>
       </CharacterInfo>
       {showDescription && <Description>{description}</Description>}
@@ -63,7 +63,7 @@ const NoStyleButton = styled.button`
   z-index: 1;
 `;
 
-const Container = styled.div<{ $detailed: boolean }>`
+const Container = styled.div<{ $isDetailed: boolean }>`
   position: relative;
   width: 100%;
 
@@ -83,7 +83,7 @@ const Container = styled.div<{ $detailed: boolean }>`
       height: 100%;
     }
     ${(props) =>
-      !props.$detailed &&
+      !props.$isDetailed &&
       `
       &:hover ${NoStyleButton} {
         color: #fff;
@@ -97,8 +97,8 @@ const Container = styled.div<{ $detailed: boolean }>`
   }
 `;
 
-const CharacterPhotoWrapper = styled.div<{ $detailed: boolean }>`
-  ${(props) => !props.$detailed && "height: 190px;"}
+const CharacterPhotoWrapper = styled.div<{ $isDetailed: boolean }>`
+  ${(props) => !props.$isDetailed && "height: 190px;"}
 `;
 
 const CharacterPhoto = styled.img`
@@ -117,7 +117,7 @@ const CharacterInfo = styled.div`
   align-items: center;
 `;
 
-export const Name = styled.span<{ $detailed: boolean }>`
+export const Name = styled.span<{ $isDetailed: boolean }>`
   width: 108px;
   color: #fff;
   font-size: 14px;
@@ -127,7 +127,7 @@ export const Name = styled.span<{ $detailed: boolean }>`
   z-index: 1;
 
   ${(props) =>
-    props.$detailed &&
+    props.$isDetailed &&
     `
     font-weight: 700;
     font-size: 32px;
