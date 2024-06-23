@@ -1,4 +1,5 @@
 import CharacterDetails from "@/components/CharacterDetails";
+import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { getCharacter, getComics } from "@/services/marvelApi";
 import { ReactNode } from "react";
 
@@ -17,9 +18,11 @@ export default async function Details({
   }
 
   return (
-    <CharacterDetails
-      character={characterData}
-      comics={comicsData.data?.results}
-    />
+    <PageWrapper>
+      <CharacterDetails
+        character={characterData}
+        comics={comicsData.data?.results}
+      />
+    </PageWrapper>
   );
 }

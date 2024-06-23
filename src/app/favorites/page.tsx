@@ -1,6 +1,7 @@
 import { CharacterSearchForm } from "@/components/CharacterSearchForm";
 import CharactersList from "@/components/CharactersList";
 import { ContentWrapper } from "@/components/ContentWrapper/ContentWrapper";
+import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { Text } from "@/components/Text/Text";
 import { getCharacter } from "@/services/marvelApi";
 import { cookies } from "next/headers";
@@ -33,22 +34,24 @@ export default async function Favorites({
     .filter((c) => !!c);
 
   return (
-    <ContentWrapper
-      $paddingBottom={24}
-      $paddingTop={24}
-      $paddingLeft={16}
-      $paddingRight={16}
-    >
-      <ContentWrapper $paddingBottom={24}>
-        <Text isUpperCase size={24} weight={700}>
-          Favorites
-        </Text>
+    <PageWrapper>
+      <ContentWrapper
+        $paddingBottom={24}
+        $paddingTop={24}
+        $paddingLeft={16}
+        $paddingRight={16}
+      >
+        <ContentWrapper $paddingBottom={24}>
+          <Text isUpperCase size={24} weight={700}>
+            Favorites
+          </Text>
+        </ContentWrapper>
+        <CharacterSearchForm
+          initialSearch={searchValue}
+          resultCount={filteredCharacters.length}
+        />
+        <CharactersList characters={filteredCharacters} />
       </ContentWrapper>
-      <CharacterSearchForm
-        initialSearch={searchValue}
-        resultCount={filteredCharacters.length}
-      />
-      <CharactersList characters={filteredCharacters} />
-    </ContentWrapper>
+    </PageWrapper>
   );
 }

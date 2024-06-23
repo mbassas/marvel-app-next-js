@@ -25,6 +25,8 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 16px;
   background-color: #000;
+  position: relative;
+  z-index: 1;
 `;
 
 const RedHeart = styled(Heart)`

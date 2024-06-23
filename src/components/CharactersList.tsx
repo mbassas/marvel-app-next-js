@@ -30,8 +30,8 @@ const Li = styled.li`
 `;
 const Ul = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 173px);
-  row-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  gap: 16px;
   justify-content: space-between;
 `;
 
