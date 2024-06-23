@@ -1,6 +1,6 @@
 "use client";
 import { Character } from "@/types/MarvelApiTypes";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "./icons/Heart";
 import { useRouter } from "next/navigation";
@@ -29,23 +29,27 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
 
   const showDescription = isDetailed && description;
   return (
-    <Container $isDetailed={isDetailed}>
-      <CharacterPhotoWrapper $isDetailed={isDetailed}>
-        <CharacterPhoto
-          src={`${thumbnail.path}.${thumbnail.extension}`}
-          alt={name}
-          loading="lazy"
-        />
-      </CharacterPhotoWrapper>
+    <Container>
+      <CharacterCardContentWrapper $isDetailed={isDetailed}>
+        <CharacterPhotoWrapper $isDetailed={isDetailed}>
+          <CharacterPhoto
+            src={`${thumbnail.path}.${thumbnail.extension}`}
+            alt={name}
+            loading="lazy"
+          />
+        </CharacterPhotoWrapper>
 
-      <CharacterInfo>
-        {!isDetailed && <Rectangle />}
-        <Name $isDetailed={isDetailed}>{name}</Name>
-        <NoStyleButton onClick={handleToggleFavorite}>
-          <Heart selected={isFavorite} size={isDetailed ? "lg" : "sm"} />
-        </NoStyleButton>
-      </CharacterInfo>
-      {showDescription && <Description>{description}</Description>}
+        <CharacterInfoWrapper>
+          <CharacterInfo>
+            {!isDetailed && <Rectangle />}
+            <Name $isDetailed={isDetailed}>{name}</Name>
+            <NoStyleButton onClick={handleToggleFavorite}>
+              <Heart selected={isFavorite} size={isDetailed ? "lg" : "sm"} />
+            </NoStyleButton>
+          </CharacterInfo>
+          {showDescription && <Description>{description}</Description>}
+        </CharacterInfoWrapper>
+      </CharacterCardContentWrapper>
       <Cut />
     </Container>
   );
@@ -70,43 +74,66 @@ const NoStyleButton = styled.button`
   z-index: 1;
 `;
 
-const Container = styled.div<{ $isDetailed: boolean }>`
+const Container = styled.div`
   position: relative;
   width: 100%;
-
   background-color: #000;
+`;
 
-  /*---------------------------------------
-  the card expands if another one in the row
-  has a longer name
-  */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  /** ------------------------------------- */
+const CharacterCardContentWrapper = styled.div<{ $isDetailed: boolean }>(
+  (props) => css`
+    /*---------------------------------------
+    the card expands if another one in the row
+    has a longer name
+    */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /** ------------------------------------- */
 
-  @media (hover: hover) {
-    &:hover ${Rectangle} {
-      height: 100%;
-    }
-    ${(props) =>
-      !props.$isDetailed &&
+    @media (hover: hover) {
+      &:hover ${Rectangle} {
+        height: 100%;
+      }
+      ${!props.$isDetailed &&
       `
       &:hover ${NoStyleButton} {
         color: #fff;
       }
     `}
-  }
+    }
 
-  ${NoStyleButton} {
-    transition: color 0.3s ease-in-out;
-    color: #ec1d24;
-  }
-`;
+    ${NoStyleButton} {
+      transition: color 0.3s ease-in-out;
+      color: #ec1d24;
+    }
 
-const CharacterPhotoWrapper = styled.div<{ $isDetailed: boolean }>`
-  ${(props) => !props.$isDetailed && "height: 190px;"}
-`;
+    ${props.$isDetailed &&
+    css`
+      @media (min-width: 768px) {
+        flex-direction: row;
+        width: 100%;
+        max-width: 960px;
+        margin: auto;
+        gap: 48px;
+      }
+    `}
+  `,
+);
+
+const CharacterPhotoWrapper = styled.div<{ $isDetailed: boolean }>(
+  (props) => css`
+    ${!props.$isDetailed && "height: 190px;"}
+    ${props.$isDetailed &&
+    css`
+      @media (min-width: 768px) {
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+      }
+    `}
+  `,
+);
 
 const CharacterPhoto = styled.img`
   width: 100%;
@@ -135,12 +162,12 @@ const Name = styled.span<{ $isDetailed: boolean }>`
 
   ${(props) =>
     props.$isDetailed &&
-    `
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
-    width: 218px;
-  `}
+    css`
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 37px;
+      width: 218px;
+    `}
 `;
 
 const Cut = styled.div`
@@ -154,13 +181,17 @@ const Cut = styled.div`
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 `;
 
+const CharacterInfoWrapper = styled.div`
+  flex: 1;
+  align-content: center;
+`;
+
 const Description = styled.p`
   color: #fff;
   padding: 8px 16px 48px 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  width: 361px;
 `;
 
 export default CharacterCard;

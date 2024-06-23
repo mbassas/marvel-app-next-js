@@ -66,10 +66,13 @@ const ScrollingWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 0 16px;
+  padding: 0 16px 24px 16px;
+
+  scrollbar-color: var(--marvel-red) transparent;
+  scrollbar-width: 4px;
 
   @media (min-width: 768px) {
-    padding: 0 48px;
+    padding: 0px 48px 24px 48px;
   }
 `;
 

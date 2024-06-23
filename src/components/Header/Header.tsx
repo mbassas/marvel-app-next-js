@@ -8,9 +8,9 @@ const Header = () => {
   const { favorites } = useFavoritesContext();
   return (
     <Container>
-      <Link href="/">
+      <MarvelIcon href="/">
         <Icon src="marvel_logo.svg" alt={"marvel"} width={100} height={100} />
-      </Link>
+      </MarvelIcon>
 
       <Favorites href="/favorites">
         <RedHeart selected size="lg" />
@@ -27,6 +27,7 @@ const Container = styled.div`
   background-color: #000;
   position: relative;
   z-index: 1;
+  border: 1px solid #333333;
 `;
 
 const RedHeart = styled(Heart)`
@@ -37,11 +38,20 @@ const Icon = styled.img<{ $width?: number; $height?: number }>`
   height: ${(props) => (props.$height ? `${props.$height}px` : "52px")};
 `;
 
+const MarvelIcon = styled(Link)`
+  @media (min-width: 768px) {
+    padding: 0px 32px 0px 32px;
+  }
+`;
+
 const Favorites = styled(Link)`
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px;
+  @media (min-width: 768px) {
+    padding: 8px 32px 8px 32px;
+  }
 `;
 
 const FavoritesCounter = styled.span`
