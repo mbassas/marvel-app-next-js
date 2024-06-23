@@ -4,7 +4,11 @@ import { ContentWrapper } from "@/components/ContentWrapper/ContentWrapper";
 import { getCharacters } from "@/services/marvelApi";
 import { ReactNode } from "react";
 
-export default async function Home({ searchParams }): Promise<ReactNode> {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { q: string };
+}): Promise<ReactNode> {
   const initialSearch = searchParams.q || "";
   const { data } = await getCharacters(initialSearch);
   if (!data) return <div>not found</div>;

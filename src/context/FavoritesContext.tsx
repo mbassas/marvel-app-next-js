@@ -13,31 +13,32 @@ const FavoritesContext = createContext<FavoritesContextValue>({
   toggleFavorite: () => {},
 });
 
-export function FavoritesProvider({ children }: { children: React.ReactNode }) {
-  let [favorites, setFavorites] = useState<number[]>(() => {
-    const cookie = getCookie("favorites");
-    if (cookie) {
-      return cookie.split(",").map((id) => parseInt(id));
-    }
-    return [];
-  });
+const persistFavoritesCookie = (favorites: number[]) => {
+  if (favorites.length === 0) {
+    setCookie("favorites", "", 0);
+    return;
+  } else {
+    setCookie("favorites", favorites.join(","), 365);
+  }
+};
 
-  const toggleFavorite = (id: number) => {
-    if (favorites.includes(id)) {
-      setFavorites(favorites.filter((favorite) => favorite !== id));
-    } else {
-      setFavorites([...favorites, id]);
-    }
-  };
+export function FavoritesProvider({ children }: { children: React.ReactNode }) {
+  let [favorites, setFavorites] = useState<number[]>([]);
 
   useEffect(() => {
-    if (favorites.length === 0) {
-      setCookie("favorites", "", 0);
-      return;
-    } else {
-      setCookie("favorites", favorites.join(","), 365);
+    const cookie = getCookie("favorites");
+    if (cookie) {
+      setFavorites(cookie.split(",").map((id) => parseInt(id)));
     }
-  }, [favorites]);
+  }, []);
+
+  const toggleFavorite = (id: number) => {
+    const nextFavorites = favorites.includes(id)
+      ? favorites.filter((favorite) => favorite !== id)
+      : [...favorites, id];
+    setFavorites(nextFavorites);
+    persistFavoritesCookie(nextFavorites);
+  };
 
   return (
     <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>

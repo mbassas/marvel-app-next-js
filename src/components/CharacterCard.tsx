@@ -3,6 +3,7 @@ import { Character } from "@/types/MarvelApiTypes";
 import styled from "styled-components";
 import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "./icons/Heart";
+import { useRouter } from "next/navigation";
 
 interface CharacterCardProps
   extends Pick<Character, "name" | "thumbnail" | "id" | "description"> {
@@ -17,11 +18,13 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   isDetailed = false,
 }) => {
   const { toggleFavorite, favorites } = useFavoritesContext();
+  const router = useRouter();
   const isFavorite = favorites.includes(id);
   const handleToggleFavorite = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     event.stopPropagation();
     toggleFavorite(id);
+    router.refresh();
   };
 
   const showDescription = isDetailed && description;
@@ -31,6 +34,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         <CharacterPhoto
           src={`${thumbnail.path}.${thumbnail.extension}`}
           alt={name}
+          loading="lazy"
         />
       </CharacterPhotoWrapper>
 

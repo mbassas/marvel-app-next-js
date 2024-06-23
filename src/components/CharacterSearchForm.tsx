@@ -19,13 +19,14 @@ export const CharacterSearchForm: React.FC<Props> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (searchValue) params.set("q", searchValue);
-    router.push(`?${params.toString()}`);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
+
+    const params = new URLSearchParams();
+    if (e.target.value) params.set("q", e.target.value);
+    router.push(`?${params.toString()}`);
   };
 
   return (
