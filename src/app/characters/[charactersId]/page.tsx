@@ -1,6 +1,7 @@
 import CharacterDetails from "@/components/CharacterDetails";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { getCharacter, getComics } from "@/services/marvelApi";
+import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 
 export default async function Details({
@@ -14,7 +15,7 @@ export default async function Details({
   ]);
 
   if (!characterData) {
-    return <div>Character not found</div>;
+    return notFound();
   }
 
   return (

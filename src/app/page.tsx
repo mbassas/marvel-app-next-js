@@ -11,7 +11,6 @@ export default async function Home({
 }): Promise<ReactNode> {
   const initialSearch = searchParams.q || "";
   const { data } = await getCharacters(initialSearch);
-  if (!data) return <div>not found</div>;
 
   return (
     <ContentWrapper
@@ -22,7 +21,7 @@ export default async function Home({
     >
       <CharacterSearchForm
         initialSearch={initialSearch}
-        resultCount={data.count}
+        resultCount={data?.count}
       />
       <CharactersList characters={data.results} />
     </ContentWrapper>

@@ -4,7 +4,7 @@ export interface DataWrapper<T> {
   copyright: string;
   attributionText: string;
   attributionHTML?: string;
-  data?: DataContainer<T>;
+  data: DataContainer<T>;
   etag?: string;
 }
 
