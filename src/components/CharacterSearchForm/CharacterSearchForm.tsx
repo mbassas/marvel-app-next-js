@@ -47,7 +47,7 @@ const CharacterSearchFormWrapper = styled.form`
   flex-direction: column;
   gap: 12px;
   padding: 12px 0;
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-md);
 `;
 
 const ResultsCount = styled.p`

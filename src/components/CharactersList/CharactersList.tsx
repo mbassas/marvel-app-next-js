@@ -33,7 +33,7 @@ const Li = styled.li`
 const Ul = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
-  gap: 16px;
+  gap: var(--spacing-sm);
   justify-content: space-between;
 `;
 

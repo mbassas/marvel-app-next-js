@@ -42,7 +42,7 @@ export default async function Favorites({
         $paddingRight={16}
       >
         <ContentWrapper $paddingBottom={24}>
-          <Text isUpperCase size={24} weight={700}>
+          <Text isUpperCase size={"lg"} weight={700}>
             Favorites
           </Text>
         </ContentWrapper>

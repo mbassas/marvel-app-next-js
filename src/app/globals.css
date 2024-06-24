@@ -1,6 +1,29 @@
 :root {
-  --max-width: 1100px;
+  /* Colors */
   --marvel-red: #ec1d24;
+  --bg-dark: #000;
+  --bg-light: #fff;
+
+  /* Spacings */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+
+  /* Font sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+
+  /* Line heights */
+  --line-height-xs: 12px;
+  --line-height-sm: 16px;
+  --line-height-md: 19px;
+  --line-height-lg: 24px;
+  --line-height-xl: 37px;
 }
 
 * {

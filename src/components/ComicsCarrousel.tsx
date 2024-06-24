@@ -6,7 +6,7 @@ const ComicsCarrousel: React.FC<{ comics: Comic[] }> = ({ comics }) => {
   return (
     <CarouselWrapper>
       <TitleWrapper>
-        <Text as="h2" size={24} weight={700} isUpperCase>
+        <Text as="h2" size={"lg"} weight={700} isUpperCase>
           Comics
         </Text>
       </TitleWrapper>
@@ -19,8 +19,10 @@ const ComicsCarrousel: React.FC<{ comics: Comic[] }> = ({ comics }) => {
               width={"100%"}
               height={280}
             />
-            <ComicTitle>{comic.title}</ComicTitle>
-            <ComicYear>{new Date(comic.dates[0].date).getFullYear()}</ComicYear>
+            <ComicTitle size="md" weight={500}>
+              {comic.title}
+            </ComicTitle>
+            <Text size="xs">{new Date(comic.dates[0].date).getFullYear()}</Text>
           </ComicCard>
         ))}
       </ScrollingWrapper>
@@ -29,15 +31,15 @@ const ComicsCarrousel: React.FC<{ comics: Comic[] }> = ({ comics }) => {
 };
 
 const CarouselWrapper = styled.div`
-  margin-top: 48px;
+  margin-top: var(--spacing-xl);
 `;
 
 const TitleWrapper = styled.div`
-  padding-left: 16px;
-  margin-bottom: 24px;
+  padding-left: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
 
   @media (min-width: 768px) {
-    padding-left: 48px;
+    padding-left: var(--spacing-xl);
   }
 `;
 
@@ -49,30 +51,24 @@ const ComicCard = styled.div`
   min-width: 180px;
 `;
 
-const ComicTitle = styled.p`
-  font-weight: 500;
-  font-size: 15px;
+const ComicTitle = styled(Text)`
   white-space: break-spaces;
-  margin-bottom: 8px;
-`;
-
-const ComicYear = styled.p`
-  font-size: 12px;
+  margin-bottom: var(--spacing-xs);
 `;
 
 const ScrollingWrapper = styled.div`
   display: flex;
-  gap: 16px;
+  gap: var(--spacing-sm);
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 0 16px 24px 16px;
+  padding: 0 var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
 
   scrollbar-color: var(--marvel-red) transparent;
   scrollbar-width: 4px;
 
   @media (min-width: 768px) {
-    padding: 0px 48px 24px 48px;
+    padding: 0px var(--spacing-xl) var(--spacing-md) var(--spacing-xl);
   }
 `;
 

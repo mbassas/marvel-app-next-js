@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "../icons/Heart";
 import { useRouter } from "next/navigation";
+import { Text } from "../Text/Text";
 
 interface CharacterCardProps
   extends Pick<Character, "name" | "thumbnail" | "id" | "description"> {
@@ -42,7 +43,13 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
         <CharacterInfoWrapper>
           <CharacterInfo>
             {!isDetailed && <Rectangle />}
-            <Name $isDetailed={isDetailed}>{name}</Name>
+            <Name
+              isUpperCase
+              weight={isDetailed ? 700 : 400}
+              size={isDetailed ? "xl" : "sm"}
+            >
+              {name}
+            </Name>
             <NoStyleButton
               onClick={handleToggleFavorite}
               aria-label="heart-icon"
@@ -50,7 +57,9 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
               <Heart selected={isFavorite} size={isDetailed ? "lg" : "sm"} />
             </NoStyleButton>
           </CharacterInfo>
-          {showDescription && <Description>{description}</Description>}
+          {showDescription && (
+            <Description size="md">{description}</Description>
+          )}
         </CharacterInfoWrapper>
       </CharacterCardContentWrapper>
       <Cut />
@@ -80,7 +89,7 @@ const NoStyleButton = styled.button`
 const Container = styled.div`
   position: relative;
   width: 100%;
-  background-color: #000;
+  background-color: var(--bg-dark);
 `;
 
 const CharacterCardContentWrapper = styled.div<{ $isDetailed: boolean }>(
@@ -118,7 +127,7 @@ const CharacterCardContentWrapper = styled.div<{ $isDetailed: boolean }>(
         width: 100%;
         max-width: 960px;
         margin: auto;
-        gap: 48px;
+        gap: var(--spacing-xl);
       }
     `}
   `,
@@ -147,40 +156,25 @@ const CharacterPhoto = styled.img`
 const CharacterInfo = styled.div`
   position: relative;
   display: flex;
-  flex: 1;
   justify-content: space-between;
-  padding: 16px;
+  padding: var(--spacing-sm);
   padding-top: 21px;
   align-items: center;
 `;
 
-const Name = styled.span<{ $isDetailed: boolean }>`
-  width: 108px;
+const Name = styled(Text)`
   color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.41px;
-  text-transform: uppercase;
   z-index: 1;
-
-  ${(props) =>
-    props.$isDetailed &&
-    css`
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 37px;
-      width: 218px;
-    `}
+  flex: 1;
 `;
 
 const Cut = styled.div`
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  bottom: -1px;
+  right: -1px;
+  width: 13px;
+  height: 13px;
+  background-color: var(--bg-light);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 `;
 
@@ -189,12 +183,10 @@ const CharacterInfoWrapper = styled.div`
   align-content: center;
 `;
 
-const Description = styled.p`
+const Description = styled(Text)`
   color: #fff;
-  padding: 8px 16px 48px 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xl)
+    var(--spacing-sm);
 `;
 
 export default CharacterCard;
