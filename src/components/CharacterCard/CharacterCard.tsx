@@ -2,7 +2,7 @@
 import { Character } from "@/types/MarvelApiTypes";
 import styled, { css } from "styled-components";
 import { useFavoritesContext } from "@/context/FavoritesContext";
-import { Heart } from "./icons/Heart";
+import { Heart } from "../icons/Heart";
 import { useRouter } from "next/navigation";
 
 interface CharacterCardProps
@@ -43,7 +43,10 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
           <CharacterInfo>
             {!isDetailed && <Rectangle />}
             <Name $isDetailed={isDetailed}>{name}</Name>
-            <NoStyleButton onClick={handleToggleFavorite}>
+            <NoStyleButton
+              onClick={handleToggleFavorite}
+              aria-label="heart-icon"
+            >
               <Heart selected={isFavorite} size={isDetailed ? "lg" : "sm"} />
             </NoStyleButton>
           </CharacterInfo>

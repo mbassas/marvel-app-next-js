@@ -1,8 +1,8 @@
 "use client";
 import { Character, Comic } from "@/types/MarvelApiTypes";
-import ComicsCarrousel from "./ComicsCarrousel";
-import CharacterCard from "./CharacterCard";
-import { ContentWrapper } from "./ContentWrapper/ContentWrapper";
+import ComicsCarrousel from "../ComicsCarrousel";
+import CharacterCard from "../CharacterCard/CharacterCard";
+import { ContentWrapper } from "../ContentWrapper/ContentWrapper";
 
 const CharacterDetails: React.FC<{
   character: Character;

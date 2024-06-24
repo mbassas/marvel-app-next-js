@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import { TextInput } from "./TextInput/TextInput";
+import { TextInput } from "../TextInput/TextInput";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
