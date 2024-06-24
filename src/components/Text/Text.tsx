@@ -9,6 +9,13 @@ interface Props {
   weight?: number;
 }
 
+const Element = styled.div<Props>(
+  ({ isUpperCase, size, weight }) => `
+  text-transform: ${isUpperCase ? "uppercase" : "none"};
+  font-size: ${size}px;
+  font-weight: ${weight};
+`,
+);
 export const Text: React.FC<Props> = ({
   as = "p",
   children,
@@ -16,11 +23,9 @@ export const Text: React.FC<Props> = ({
   isUpperCase = false,
   weight = 400,
 }) => {
-  const Element = styled(as)`
-    text-transform: ${isUpperCase ? "uppercase" : "none"};
-    font-size: ${size}px;
-    font-weight: ${weight};
-  `;
-
-  return <Element>{children}</Element>;
+  return (
+    <Element as={as} size={size} isUpperCase={isUpperCase} weight={weight}>
+      {children}
+    </Element>
+  );
 };
