@@ -1,4 +1,4 @@
-import CharacterDetails from "@/components/CharacterDetails";
+import CharacterDetails from "@/components/CharacterDetails/CharacterDetails";
 import { PageWrapper } from "@/components/PageWrapper/PageWrapper";
 import { getCharacter, getComics } from "@/services/marvelApi";
 import { notFound } from "next/navigation";

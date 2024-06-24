@@ -1,5 +1,5 @@
-import { CharacterSearchForm } from "@/components/CharacterSearchForm";
-import CharactersList from "@/components/CharactersList";
+import { CharacterSearchForm } from "@/components/CharacterSearchForm/CharacterSearchForm";
+import CharactersList from "@/components/CharactersList/CharactersList";
 import { ContentWrapper } from "@/components/ContentWrapper/ContentWrapper";
 import { getCharacters } from "@/services/marvelApi";
 import { ReactNode } from "react";
