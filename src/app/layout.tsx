@@ -3,6 +3,7 @@ import StyledComponentsRegistry from "../../lib/registry";
 import Header from "@/components/Header/Header";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { Roboto_Condensed } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
 
 const roboto = Roboto_Condensed({
   weight: ["400", "500", "700"],
@@ -22,6 +23,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <FavoritesProvider>
             <Header />
+            <NextTopLoader color="#ec1d24" showSpinner={false} />
             {children}
           </FavoritesProvider>
         </StyledComponentsRegistry>
