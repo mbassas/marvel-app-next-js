@@ -11,6 +11,7 @@ export const Heart: React.FC<{
   if (selected) {
     return (
       <svg
+        data-testid="heart-icon"
         className={className}
         {...SIZE_MAP[size]}
         viewBox="0 0 24 22"
@@ -28,6 +29,7 @@ export const Heart: React.FC<{
   } else {
     return (
       <svg
+        data-testid="heart-icon-outline"
         className={className}
         {...SIZE_MAP[size]}
         viewBox="0 0 26 25"
