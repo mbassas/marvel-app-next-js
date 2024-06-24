@@ -3,47 +3,47 @@
 exports[`CharactersList test suite should match snapshot 1`] = `
 <div>
   <ul
-    class="sc-d10d23cd-1 ipFGZQ"
+    class="sc-52e6a265-1 bXWJfi"
   >
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -64,50 +64,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -128,50 +128,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -192,50 +192,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -256,50 +256,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -320,50 +320,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -384,50 +384,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -448,50 +448,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -512,50 +512,50 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
     </li>
     <li
-      class="sc-d10d23cd-0 itURZk"
+      class="sc-52e6a265-0 hlwSxP"
     >
       <a
         href="/characters/1"
       >
         <div
-          class="sc-3dda9247-2 AQIGj"
+          class="sc-f4478397-2 clVUFy"
         >
           <div
-            class="sc-3dda9247-3 bvhOQz"
+            class="sc-f4478397-3 fQputf"
           >
             <div
-              class="sc-3dda9247-4 fSXomY"
+              class="sc-f4478397-4 bWRWYe"
             >
               <img
                 alt="Test Character 1"
-                class="sc-3dda9247-5 kPJwYJ"
+                class="sc-f4478397-5 gKtkFz"
                 loading="lazy"
                 src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
               />
             </div>
             <div
-              class="sc-3dda9247-9 fcPosn"
+              class="sc-f4478397-9 bPdtYJ"
             >
               <div
-                class="sc-3dda9247-6 kRKdGV"
+                class="sc-f4478397-6 fAqBFZ"
               >
                 <div
-                  class="sc-3dda9247-0 laNjvJ"
+                  class="sc-f4478397-0 evpbLf"
                 />
-                <span
-                  class="sc-3dda9247-7 DOpLc"
+                <p
+                  class="sc-2db796cf-0 dOeWdF sc-f4478397-7 cvXNwo"
                 >
                   Test Character 1
-                </span>
+                </p>
                 <button
                   aria-label="heart-icon"
-                  class="sc-3dda9247-1 hmWJeM"
+                  class="sc-f4478397-1 fcjSIG"
                 >
                   <svg
                     data-testid="heart-icon-outline"
@@ -576,7 +576,7 @@ exports[`CharactersList test suite should match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="sc-3dda9247-8 gCOtNP"
+            class="sc-f4478397-8 brQQyq"
           />
         </div>
       </a>
