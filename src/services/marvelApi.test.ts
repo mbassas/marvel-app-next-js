@@ -5,7 +5,6 @@
 import { mockCharacter } from "@/__mocks__/mockCharacter";
 import { getCharacter, getCharacters, getComics } from "./marvelApi";
 import { mockCharacters } from "@/__mocks__/mockCharacters";
-import { mockFilteredCharacters } from "@/__mocks__/mockFilteredCharacters";
 import { mockComics } from "@/__mocks__/mockComics";
 
 const date = new Date("2024-06-24");
@@ -70,7 +69,7 @@ describe("MarvelApi", () => {
     it("should return filtered characters", async () => {
       fetchMock.mockResolvedValue({
         json: jest.fn().mockResolvedValueOnce({
-          data: { results: mockFilteredCharacters },
+          data: { results: mockCharacters },
         }),
       } as any);
 
@@ -80,7 +79,7 @@ describe("MarvelApi", () => {
         "https://marvel-api.com/characters?ts=1719187200000&apikey=public&hash=1922c7dcee804f140a8e7597e45bb117&limit=50&offset=0&nameStartsWith=Spider",
       );
 
-      expect(characters.data.results).toEqual(mockFilteredCharacters);
+      expect(characters.data.results).toEqual(mockCharacters);
     });
   });
 
