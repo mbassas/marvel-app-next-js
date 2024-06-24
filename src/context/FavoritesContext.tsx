@@ -8,7 +8,7 @@ interface FavoritesContextValue {
   toggleFavorite: (id: number) => void;
 }
 
-const FavoritesContext = createContext<FavoritesContextValue>({
+export const FavoritesContext = createContext<FavoritesContextValue>({
   favorites: [],
   toggleFavorite: () => {},
 });
