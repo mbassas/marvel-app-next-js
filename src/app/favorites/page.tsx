@@ -19,11 +19,8 @@ export default async function Favorites({
   const favoritesCookie = cookieStore.get("favorites");
   const searchValue = searchParams.q || "";
 
-  if (!favoritesCookie) {
-    return <CharactersList characters={[]} />;
-  }
-
-  const favoritesIds = favoritesCookie.value
+  const favoritesCookieValue = favoritesCookie?.value || "";
+  const favoritesIds = favoritesCookieValue
     .split(",")
     .map((id) => parseInt(id));
 
@@ -34,24 +31,25 @@ export default async function Favorites({
     .filter((c) => !!c);
 
   return (
-    <PageWrapper>
-      <ContentWrapper
-        $paddingBottom={24}
-        $paddingTop={24}
-        $paddingLeft={16}
-        $paddingRight={16}
-      >
-        <ContentWrapper $paddingBottom={24}>
-          <Text isUpperCase size={"lg"} weight={700}>
-            Favorites
-          </Text>
-        </ContentWrapper>
+    <ContentWrapper
+      $paddingBottom={24}
+      $paddingTop={24}
+      $paddingLeft={16}
+      $paddingRight={16}
+    >
+      <ContentWrapper $paddingBottom={24}>
+        <Text isUpperCase size={"lg"} weight={700}>
+          Favorites
+        </Text>
+      </ContentWrapper>
+
+      <PageWrapper>
         <CharacterSearchForm
           initialSearch={searchValue}
           resultCount={filteredCharacters.length}
         />
         <CharactersList characters={filteredCharacters} />
-      </ContentWrapper>
-    </PageWrapper>
+      </PageWrapper>
+    </ContentWrapper>
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useFavoritesContext } from "@/context/FavoritesContext";
 import { Heart } from "@/components/icons/Heart";
 import { Text } from "../Text/Text";
+import Image from "next/image";
 
 const Header = () => {
   const { favorites } = useFavoritesContext();
@@ -11,7 +12,13 @@ const Header = () => {
     <>
       <Container>
         <MarvelIcon href="/">
-          <Icon src="marvel_logo.svg" alt={"marvel"} width={100} height={100} />
+          <Image
+            priority
+            src="/marvel_logo.svg"
+            alt={"marvel"}
+            width={130}
+            height={52}
+          />
         </MarvelIcon>
 
         <Favorites href="/favorites">
@@ -44,10 +51,6 @@ const Container = styled.div`
 
 const RedHeart = styled(Heart)`
   color: var(--marvel-red);
-`;
-const Icon = styled.img<{ $width?: number; $height?: number }>`
-  width: ${(props) => (props.$width ? `${props.$width}px` : "130px")};
-  height: ${(props) => (props.$height ? `${props.$height}px` : "52px")};
 `;
 
 const MarvelIcon = styled(Link)`
