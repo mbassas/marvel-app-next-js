@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import { FavoritesProvider } from "@/context/FavoritesContext";
 import { Roboto_Condensed } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
+import { Metadata } from "next";
 
 const roboto = Roboto_Condensed({
   weight: ["400", "500", "700"],
@@ -11,6 +12,10 @@ const roboto = Roboto_Condensed({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "Zara Challenge Marvel",
+};
 
 export default function RootLayout({
   children,
