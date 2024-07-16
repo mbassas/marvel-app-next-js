@@ -1,6 +1,6 @@
 # ZARA WEB CHALLENGE
 
-This test involves developing an application to retrieve detailed information on various Marvel characters using the Marvel API found at [Marvel Developer](https://developer.marvel.com/docs).
+This repository involves developing an application to retrieve detailed information on various Marvel characters using the Marvel API found at [Marvel Developer](https://developer.marvel.com/docs).
 
 It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -135,4 +135,4 @@ NextJS with Typescript.
 
 ## Deploy on Vercel
 
-Click [here](https://zara-challenge-marvel.vercel.app/) to check vercel deployment.
+Click [here](https://marvel-app-next-js.vercel.app/) to check vercel deployment.
