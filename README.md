@@ -1,4 +1,4 @@
-# ZARA WEB CHALLENGE
+# MARVEL APP
 
 This repository involves developing an application to retrieve detailed information on various Marvel characters using the Marvel API found at [Marvel Developer](https://developer.marvel.com/docs).
 
